@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoção de Gatos Acessível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header role="banner">
+        <img src="./img/header-gatos.jpg" alt="Vários gatos filhotes juntos" class="header-img">
+        <h1>Adote um Gatinho 🐱</h1>
+        <div class="accessibility-controls">
+            <button id="fontIncreaseBtn" aria-label="Aumentar fonte">A+</button>
+            <button id="fontDecreaseBtn" aria-label="Diminuir fonte">A-</button>
+            <button id="contrasteBtn" aria-label="Ativar alto contraste">Alto Contraste</button>
+        </div>
+    </header>
 
+    <main>
+        <section id="gatos-disponiveis" aria-labelledby="gatos-titulo">
+            <h2 id="gatos-titulo">Gatos para Adoção</h2>
+            <div class="gatos-grid">
+                <!-- Gato 1 -->
+                <div class="gato-card" tabindex="0" role="article" data-gato-id="1">
+                    <img src="./img/luna.jpg" alt="Gato siamês branco com olhos azuis" class="gato-img">
+                    <h3>Luna</h3>
+                    <ul>
+                        <li>Idade: 2 anos</li>
+                        <li>Personalidade: Calma e carinhosa</li>
+                        <li>Necessidades: Cuidados com pelagem longa</li>
+                    </ul>
+                    <button class="adotar-btn" aria-label="Adotar Luna">Quero adotar!</button>
+                </div>
+
+                <!-- Gato 2 -->
+                <div class="gato-card" tabindex="0" role="article" data-gato-id="2">
+                    <img src="./img/thor.jpg" alt="Gato rajado laranja" class="gato-img">
+                    <h3>Thor</h3>
+                    <ul>
+                        <li>Idade: 1 ano</li>
+                        <li>Personalidade: Brincalhão e energético</li>
+                        <li>Necessidades: Espaço para correr</li>
+                    </ul>
+                    <button class="adotar-btn" aria-label="Adotar Thor">Quero adotar!</button>
+                </div>
+
+                <!-- Gato 3 -->
+                <div class="gato-card" tabindex="0" role="article" data-gato-id="3">
+                    <img src="./img/shadow.jpg" alt="Gato preto com olhos amarelos" class="gato-img">
+                    <h3>Shadow</h3>
+                    <ul>
+                        <li>Idade: 3 anos</li>
+                        <li>Personalidade: Independente e misterioso</li>
+                        <li>Necessidades: Ambiente tranquilo</li>
+                    </ul>
+                    <button class="adotar-btn" aria-label="Adotar Shadow">Quero adotar!</button>
+                </div>
+
+                <!-- Gato 4 -->
+                <div class="gato-card" tabindex="0" role="article" data-gato-id="4">
+                    <img src="./img/mimi.jpg" alt="Gato cinza listrado" class="gato-img">
+                    <h3>Mimi</h3>
+                    <ul>
+                        <li>Idade: 4 meses</li>
+                        <li>Personalidade: Curiosa e afetuosa</li>
+                        <li>Necessidades: Socialização</li>
+                    </ul>
+                    <button class="adotar-btn" aria-label="Adotar Mimi">Quero adotar!</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Adoção -->
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close-btn" aria-label="Fechar modal">&times;</span>
+            <img id="modal-img" src="" alt="" class="modal-img">
+            <div class="modal-text">
+                <h2 id="modal-nome"></h2>
+                <ul id="modal-info"></ul>
+                <button id="confirmar-adocao" class="adotar-btn">Confirmar Adoção</button>
+            </div>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <p>© 2024 Adoção Acessível | Contato: adocao@exemplo.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
